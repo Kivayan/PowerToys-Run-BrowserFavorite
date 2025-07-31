@@ -1,6 +1,7 @@
 // Copyright (c) Davide Giacometti. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using Wox.Infrastructure;
 using Wox.Plugin.Logger;
 using Path = System.IO.Path;
@@ -11,7 +12,7 @@ public class CometBrowserSource : IBrowserSource
 {
     public CometBrowserSource()
     {
-        DefaultExecutablePath = @"C:\Program Files\Comet\comet.exe";
+        DefaultExecutablePath = Environment.ExpandEnvironmentVariables(@"%LOCALAPPDATA%\Perplexity\Comet\Application\comet.exe");
         BrowserExecutable = DefaultExecutablePath;
         FavoriteProvider = new CometFavoriteProvider();
     }

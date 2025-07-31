@@ -8,7 +8,7 @@ namespace Community.PowerToys.Run.Plugin.BrowserFavorite.Helpers;
 public class CometFavoriteProvider : ChromiumFavoriteProvider
 {
     private static readonly string Path =
-        Environment.ExpandEnvironmentVariables(@"%LOCALAPPDATA%\Comet\User Data\Default\Bookmarks");
+        Environment.ExpandEnvironmentVariables(@"%LOCALAPPDATA%\Perplexity\Comet\User Data\Default\Bookmarks");
 
     public CometFavoriteProvider()
         : base(Path)

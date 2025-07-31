@@ -20,14 +20,14 @@ namespace Community.PowerToys.Run.Plugin.BrowserFavorite.Tests
             Assert.IsTrue(Array.Exists((BrowserSource[])browserSources, source => source == BrowserSource.Comet));
         }
 
-        [TestMethod] 
+        [TestMethod]
         public void Should_Instantiate_Comet_Browser_Source_From_Enum()
         {
             // Arrange
             var browserSourceType = BrowserSource.Comet;
 
             // Act & Assert - Should not throw exception
-            var browserSource = browserSourceType switch
+            IBrowserSource browserSource = browserSourceType switch
             {
                 BrowserSource.Brave => new BraveBrowserSource(),
                 BrowserSource.Chrome => new ChromeBrowserSource(),
